@@ -81,14 +81,7 @@ namespace QuantConnect.Brokerages
         /// </summary>
         /// <param name="accountType">The type of account to be modelled, defaults to
         /// <see cref="AccountType.Cash"/></param>
-        public GDAXBrokerageModel(AccountType accountType = AccountType.Cash)
-            : base(accountType)
-        {
-            if (accountType == AccountType.Margin)
-            {
-                throw new ArgumentException("The GDAX brokerage does not currently support Margin trading.", nameof(accountType));
-            }
-        }
+        public GDAXBrokerageModel(AccountType accountType = AccountType.Cash);
 
         /// <summary>
         /// GDAX global leverage rule
